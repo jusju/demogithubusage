@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @ResponseBody
 public class HelloController {
-	@RequestMapping("/forsale")
-	public String hello(@RequestParam(name = "currency") String currency,
-			@RequestParam(name = "country") String country) {
-		return "Hello " + currency + " your country maybe is: " + country;
+	@RequestMapping("/hello")
+	public String hello(@RequestParam(name = "name") String name) {
+		return "Hello " + name;
 	}
 }
